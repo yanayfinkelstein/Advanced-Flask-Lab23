@@ -9,9 +9,9 @@ app = Flask(  # Create a flask app
 )
 
 # Variables for tasks
-image_link = "https://i.imgur.com/o9Znt5k.png"
+image_link = "https://uploads-ssl.webflow.com/5dd64bd3a930f9d04abd1363/5de254f85f1762feee30d664_meet_logo_red.png"
 
-user_bio = "Middle East Entrepreneurs of Tomorrow. Enabling the next generation of Israeli and Palestinian leaders."
+user_bio = "Ryan Thomas Gosling is a Canadian actor. Prominent in both independent film and major studio features of varying genres, his films have accrued a worldwide box office gross of over 1.9 billion USD. "
 
 posts = {
     "https://i.imgur.com/1dSgGnG.png": "The cohort of 2022!",
@@ -25,7 +25,7 @@ posts = {
 
 @app.route('/')  # '/' for the default page
 def home():
-    return render_template('index.html')
+    return render_template('index.html',link = image_link ,userbio = user_bio,  posts = posts)
 
 
 @app.route('/about')  # '/' for the default page
